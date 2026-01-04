@@ -1,0 +1,79 @@
+.logo {
+    max-width: 50px;
+    max-height: 40px;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .input-group {
+      width: 100%;
+    }
+  
+    header h4,
+    header span {
+      font-size: 16px;
+    }
+  }
+  .notification-icon {
+    width: 18px;
+    height: 20px;
+    margin-right: 20px;
+    /* border: 1px solid ; */
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .image-dash{
+    margin-left: 50px;
+  }
+  /* ============= */
+  .sidebar {
+    width: 280px; /* Fixed width */
+    height: 900vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix it to the left side of the viewport */
+    top: 50;
+    left: 0;
+    background-color: white; /* Background color */
+    cursor: pointer;
+  }
+  
+  .sidebar-header-event {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color:white; /* Bootstrap primary color */
+    color: #58a4b0;
+    padding: 15px;
+    border-radius: 12px;
+    height: 5px;
+  }
+  .sidebar-header1-event {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #58a4b0; /* Bootstrap primary color */
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    height: 45px;
+  }
+  .nav-link {
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    color:#58a4b0;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .nav-link:hover {
+    background-color: #f1f1f1;
+    color: #58a4b0;
+  }
+  
+  

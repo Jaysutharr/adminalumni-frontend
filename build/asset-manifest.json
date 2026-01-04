@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4031fe65.css",
+    "main.js": "/static/js/main.348423fb.js",
+    "static/js/453.e39fb86c.chunk.js": "/static/js/453.e39fb86c.chunk.js",
+    "static/media/companylogo1.png": "/static/media/companylogo1.280d6c23a12cb404034a.png",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/fimage1.png": "/static/media/fimage1.f140bb6980e7e1a6cc3d.png",
+    "static/media/Background-image1.png": "/static/media/Background-image1.239a02cfd9b4ec74442b.png",
+    "static/media/user.png": "/static/media/user.ba14d725c64ca9492d63.png",
+    "static/media/active.png": "/static/media/active.2a4bf04f2433202b93fa.png",
+    "static/media/mentor.png": "/static/media/mentor.13d77319f4066449c9a4.png",
+    "static/media/student.png": "/static/media/student.2eeb2afe35dc6f80939e.png",
+    "static/media/aa.png": "/static/media/aa.8c282fe9a095bda85805.png",
+    "static/media/cc.png": "/static/media/cc.88d05c883ef911dfbe02.png",
+    "static/media/bb.png": "/static/media/bb.7c77491abd64c2d29b1f.png",
+    "static/media/profileNetworkinfImage.jpeg": "/static/media/profileNetworkinfImage.e01b490918b59613056f.jpeg",
+    "index.html": "/index.html",
+    "main.4031fe65.css.map": "/static/css/main.4031fe65.css.map",
+    "main.348423fb.js.map": "/static/js/main.348423fb.js.map",
+    "453.e39fb86c.chunk.js.map": "/static/js/453.e39fb86c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4031fe65.css",
+    "static/js/main.348423fb.js"
+  ]
+}

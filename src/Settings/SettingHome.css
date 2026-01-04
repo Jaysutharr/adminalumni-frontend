@@ -1,0 +1,825 @@
+/* Modal Overlay */
+.profilepersonal-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .profilepersonal-modal-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Close Button */
+  .profilepersonal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Header */
+  .profilepersonal-modal-content h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* Modal Body */
+  .profilepersonal-modal-body {
+    margin-bottom: 20px;
+  }
+  
+  .profilepersonal-modal-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    /* border-bottom: 1px solid #f0f0f0; */
+  }
+  
+  .profilepersonal-field {
+    font-weight: 500;
+    margin-right: 10px;
+    min-width: 120px;
+  }
+  
+  .profilepersonal-modal-row p {
+    margin: 0;
+    flex-grow: 1;
+    color: #6c757d;
+    color: black;
+    font-size: 14px;
+  }
+  
+  .profilepersonal-edit-icon {
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Modal Footer */
+  .profilepersonal-modal-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .profilepersonal-discard-button {
+    background: none;
+    border: 1px solid #58a4b0;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 80px;
+  }
+  .profilepersonal-discard-button:hover{
+    background-color: #58a4b0;
+    color: white;
+  }
+  .profilepersonal-save-button {
+    background-color: #58a4b0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 60px;
+  }
+  
+  .profilepersonal-save-button:hover {
+    background-color: #4a8d96;
+  }
+
+  /* ===================== */
+/* Two Factor Modal UI   */
+/* ===================== */
+
+.twofa-modal {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  width: 420px;
+  max-width: 92%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.twofa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.twofa-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.twofa-close {
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+.twofa-option {
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.twofa-option:hover {
+  border-color: #58a4b0;
+  background-color: #f6fbfc;
+}
+
+.twofa-option input[type="radio"] {
+  margin-top: 5px;
+}
+
+.twofa-option h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.twofa-option p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.twofa-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.twofa-setup-btn {
+  background-color: #58a4b0;
+  color: #fff;
+  border: none;
+  padding: 10px 36px;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.twofa-setup-btn:hover {
+  background-color: #4a8d96;
+}
+/* ===================== */
+/* Modal Overlay (ADD)   */
+/* ===================== */
+
+.twofa-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ===================== */
+/* Header Improvements   */
+/* ===================== */
+
+.twofa-close:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* ===================== */
+/* Option Enhancements   */
+/* ===================== */
+
+.twofa-option {
+  cursor: pointer;
+}
+
+.twofa-option input[type="radio"] {
+  cursor: pointer;
+  accent-color: #58a4b0;
+}
+
+/* Selected state */
+.twofa-option:has(input[type="radio"]:checked) {
+  border-color: #58a4b0;
+  background-color: #f0fafb;
+}
+
+/* ===================== */
+/* Button Enhancement    */
+/* ===================== */
+
+.twofa-setup-btn {
+  min-width: 140px;
+}
+
+.twofa-setup-btn:active {
+  transform: scale(0.97);
+}
+
+.live-support-container {
+  display: flex;
+  gap: 16px;
+  height: 580px;
+}
+
+/* LEFT */
+.live-support-left {
+  width: 260px;
+  border-right: 1px solid #eee;
+  padding-right: 10px;
+  overflow-y: auto;
+}
+
+.all-messages-btn {
+  background: #e9f7fa;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.chat-search {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.chat-user {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-user.active {
+  background: #e6e6e6;
+}
+
+.chat-user p {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+/* CENTER */
+.live-support-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.chat-header {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.message.received {
+  background: #f4f4f4;
+}
+
+.message.sent {
+  background: #e9f9fc;
+  margin-left: auto;
+}
+
+.chat-input {
+  border-top: 1px solid #eee;
+  padding: 10px;
+}
+
+.chat-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* RIGHT */
+.live-support-right {
+  width: 260px;
+  border-left: 1px solid #eee;
+  padding-left: 12px;
+}
+
+.user-info p {
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+/* Overlay */
+.faq-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.faq-modal {
+  background: #fff;
+  width: 520px;
+  padding: 30px;
+  border-radius: 18px;
+  position: relative;
+}
+
+/* Close button */
+.faq-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Title */
+.faq-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Fields */
+.faq-field {
+  margin-bottom: 22px;
+}
+
+/* Select */
+.faq-select {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1.5px solid #777;
+  outline: none;
+  appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='black' d='M6 8L0 0h12z'/%3E%3C/svg%3E") no-repeat right 18px center;
+}
+
+/* Textarea */
+.faq-textarea {
+  width: 100%;
+  height: 180px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: 1.5px solid #3b7f8a;
+  resize: none;
+  outline: none;
+}
+
+/* Buttons */
+.faq-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.faq-discard {
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 1.5px solid #aaa;
+  background: white;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.faq-save {
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  background: #58a4b0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.faq-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal */
+.faq-modal {
+  background: #fff;
+  width: 520px;
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+
+/* Close */
+.faq-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Title */
+.faq-modal h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Select */
+.faq-select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1.5px solid #cfcfcf;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Textarea */
+.faq-textarea {
+  width: 100%;
+  height: 180px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid #5aa6b0;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Actions */
+.faq-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* Buttons */
+.btn-discard {
+  padding: 12px 30px;
+  border-radius: 24px;
+  border: 1.5px solid #9e9e9e;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-save {
+  padding: 12px 30px;
+  border-radius: 24px;
+  border: none;
+  background: #58a4b0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ============================================================================ */
+/* COMPREHENSIVE RESPONSIVE ENHANCEMENTS FOR SETTINGS HOME */
+/* ============================================================================ */
+
+/* Global Responsive Adjustments */
+@media (max-width: 1200px) {
+  .container-fluid {
+    margin-left: 0 !important;
+    padding: 20px !important;
+    width: 100% !important;
+  }
+  
+  .card {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 20px !important;
+    height: auto !important;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  
+  .col-md-6, .col-lg-5, .col-lg-10 {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Chat Modal Responsiveness */
+  .profilepersonal-modal-content {
+    width: 95% !important;
+    height: 90vh !important;
+    padding: 15px;
+  }
+  
+  .live-support-container {
+    flex-direction: column;
+    height: calc(100% - 60px);
+  }
+  
+  .live-support-left {
+    width: 100%;
+    height: 150px;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  
+  .live-support-center {
+    height: 300px;
+  }
+  
+  .live-support-right {
+    display: none; /* Hide right panel on tablets to save space */
+  }
+  
+  /* Settings Cards Adjustments */
+  .card-body {
+    padding: 15px;
+  }
+  
+  .btn {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Mobile (576px) */
+@media (max-width: 576px) {
+  /* Modals */
+  .profilepersonal-modal-content,
+  .twofa-modal,
+  .faq-modal {
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .faq-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .faq-actions button {
+    width: 100%;
+  }
+  
+  /* Profile Modal */
+  .profilepersonal-modal-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .profilepersonal-field {
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: #888;
+  }
+  
+  .profilepersonal-edit-icon {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  
+  .profilepersonal-modal-row {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Chat on Mobile */
+  .live-support-left {
+    display: none; /* Show only center chat on very small screens */
+  }
+  
+  .live-support-center {
+    flex: 1;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Typography */
+  h2, .card-title strong {
+    font-size: 18px !important;
+  }
+  
+  .btn, button {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Extra Small (400px) */
+@media (max-width: 400px) {
+  .card-body {
+    padding: 10px;
+  }
+  
+  .d-flex.justify-content-between span {
+    font-size: 13px;
+  }
+}
+
+
+/* ============================================================================ */
+/* LAYOUT FIXES AND LOGOUT MODAL */
+/* ============================================================================ */
+
+.settings-main-content {
+  margin-left: 280px; /* Sidebar width */
+  padding: 30px;
+  margin-top: 20px;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.settings-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background: white;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+}
+
+.settings-card-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Logout Modal */
+.logout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.logout-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logout-modal-icon {
+  font-size: 40px;
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.logout-modal-content h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.logout-modal-content p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.logout-modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-logout-cancel {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #555;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout-cancel:hover {
+  background: #f1f1f1;
+}
+
+.btn-logout-confirm {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+  transition: all 0.2s;
+}
+
+.btn-logout-confirm:hover {
+  background: #fa5252;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments for layout */
+@media (max-width: 992px) {
+  .settings-main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+.support-card {
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+.support-card:hover {
+  border-color: #58a4b0;
+  background: #f0fbfc;
+}
+

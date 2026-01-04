@@ -1,0 +1,77 @@
+.announce-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.announce-modal {
+  background: white;
+  width: 520px;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* HEADER */
+.announce-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announce-header h3 {
+  color: #5aa9b5;
+  font-weight: 600;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+/* BODY */
+.announce-body {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.announce-body label {
+  font-weight: 500;
+}
+
+.announce-body input,
+.announce-body textarea {
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+/* FOOTER */
+.announce-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cancel-btn {
+  background: white;
+  border: 1px solid #bbb;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.announce-btn {
+  background: #5aa9b5;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+}

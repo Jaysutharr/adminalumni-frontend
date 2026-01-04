@@ -1,0 +1,94 @@
+.students-page {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.students-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.back-icon {
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.students-header h2 {
+  color: #58a4b0;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  gap: 12px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 18px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+}
+
+.header-right select {
+  border-radius: 18px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
+/* TABLE */
+.students-table {
+  margin-top: 10px;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.4fr 2fr 1fr 1.4fr 1fr 0.8fr;
+  padding: 12px;
+  align-items: center;
+}
+
+.table-head {
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+}
+
+.table-row {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.table-row span {
+  font-size: 14px;
+}
+
+.role {
+  background: #f2f6f7;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  width: fit-content;
+}
+
+/* BUTTON */
+.view-btn {
+  background: transparent;
+  border: 1px solid #58a4b0;
+  color: #58a4b0;
+  border-radius: 16px;
+  padding: 4px 14px;
+  cursor: pointer;
+}

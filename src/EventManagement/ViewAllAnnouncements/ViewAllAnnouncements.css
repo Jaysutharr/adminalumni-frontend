@@ -1,0 +1,91 @@
+.announcement-page {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* HEADER */
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.announcement-header .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.announcement-header h2 {
+  color: #5aa9b5;
+  font-weight: 600;
+}
+
+.back-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* SEARCH + FILTER */
+.announcement-header .right {
+  display: flex;
+  gap: 12px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+}
+
+.filter-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* TABLE */
+.announcement-table {
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.desc {
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+.status {
+  font-weight: 500;
+}

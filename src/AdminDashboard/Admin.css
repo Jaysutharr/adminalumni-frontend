@@ -1,0 +1,129 @@
+/* ============================================================================ */
+/* RESPONSIVE ENHANCEMENTS FOR ADMIN DASHBOARD */
+/* ============================================================================ */
+
+/* Additional responsive enhancements for extra-small screens */
+
+/* Extra Small Mobile (≤400px) */
+@media (max-width: 400px) {
+
+    /* User Overview Cards */
+    .grid.grid-cols-1>div {
+        padding: 12px !important;
+    }
+
+    /* Reduce icon sizes on very small screens */
+    .grid.grid-cols-1 img[alt] {
+        width: 32px !important;
+    }
+
+    /* Calendar adjustments */
+    .grid.grid-cols-7 span {
+        font-size: 10px !important;
+    }
+
+    /* Table text size */
+    table.text-sm {
+        font-size: 11px !important;
+    }
+
+    table th,
+    table td {
+        padding: 8px !important;
+    }
+
+    /* Button sizes */
+    button {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+    }
+
+    /* Chart container */
+    .recharts-wrapper {
+        font-size: 10px !important;
+    }
+}
+
+/* Small Mobile (≤576px) */
+@media (max-width: 576px) {
+
+    /* Adjust spacing for mobile */
+    .mt-6 {
+        margin-top: 1rem !important;
+    }
+
+    .p-6 {
+        padding: 1rem !important;
+    }
+
+    /* User Overview Cards */
+    .grid.grid-cols-1 h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Table scrolling hint */
+    .overflow-x-auto::after {
+        content: '→ Scroll';
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        color: #4aa3b5;
+        pointer-events: none;
+    }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+
+    /* Ensure proper spacing when sidebar is hidden */
+    [class*="ml-0"] {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Calendar full width on mobile */
+    .w-full.md\:w-\[320px\] {
+        max-width: 100% !important;
+    }
+
+    /* Stats icons */
+    .text-2xl {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* Desktop (≥1024px) - Ensure proper sidebar margin */
+@media (min-width: 1024px) {
+
+    /* Main content area with sidebar offset */
+    .md\:ml-\[280px\] {
+        margin-left: 280px !important;
+    }
+}
+
+/* Extra Wide Screens (≥1600px) */
+@media (min-width: 1600px) {
+
+    /* Increase maximum content width for very large screens */
+    .rounded-xl {
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Larger text for readability */
+    .text-xl {
+        font-size: 1.5rem !important;
+    }
+
+    .text-2xl {
+        font-size: 2rem !important;
+    }
+}

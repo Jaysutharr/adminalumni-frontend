@@ -1,0 +1,130 @@
+.event-stats-container {
+    padding: 16px;
+    /* background-color: #f9f9f9; */
+}
+
+.event-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+}
+
+.event-card {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px; 
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-title {
+    /* margin: 10; */
+    font-size: 20px;
+    color: #888;
+    
+}
+
+.event-number {
+    margin: 0;
+    font-size: 24px;
+    color: #58a4b0;
+    font-weight: bold;
+    margin-left: 80px;
+}
+.events-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    margin-top: -20px;
+  }
+  
+  .events-header,
+  .events-row {
+    display: grid;
+    grid-template-columns: 6fr 6fr 5fr 6fr 5fr 4fr 4fr;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .events-header {
+    /* background-color: #f7f7f7; */
+    font-weight:500;
+    text-align: left;
+  }
+  
+  .events-row:last-child {
+    border-bottom: none;
+  }
+  
+  .events-row {
+    align-items:left;
+  }
+  
+  .events-row > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    border-radius: 0.25rem;
+    /* font-size: 0.9rem; */
+  }
+  .custom-gap {
+    gap: 16px; /* Adjust the gap size as needed */
+  }
+  .logout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.logout-modal {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 14px;
+  text-align: center;
+  min-width: 350px;
+}
+
+.highlight {
+  color: #58a4b0;
+}
+
+.logout-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 1px solid #aaa;
+  background: transparent;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: #58a4b0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
