@@ -1,69 +1,112 @@
 .logo {
-    max-width: 50px;
-    max-height: 40px;
+  max-width: 50px;
+  max-height: 40px;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    width: 100%;
   }
-  
-  @media (max-width: 768px) {
-    .input-group {
-      width: 100%;
-    }
-  
-    header h4,
-    header span {
-      font-size: 16px;
-    }
+
+  header h4,
+  header span {
+    font-size: 16px;
   }
-  .notification-icon {
-    width: 18px;
-    height: 20px;
-    margin-right: 20px;
-    /* border: 1px solid ; */
-    align-items: center;
-  }
-  
-  .profile-image {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .image-dash{
-    margin-left: 50px;
-  }
-  /* ============= */
+}
+
+.notification-icon {
+  width: 18px;
+  height: 20px;
+  margin-right: 20px;
+  /* border: 1px solid ; */
+  align-items: center;
+}
+
+.profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.image-dash {
+  margin-left: 50px;
+}
+
+/* ============= */
+.sidebar {
+  width: 280px;
+  /* Fixed width */
+  height: 100vh;
+  /* Full viewport height */
+  overflow: hidden;
+  /* Prevent scrolling */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  /* Fix it to the left side of the viewport */
+  top: 50;
+  left: 0;
+  background-color: white;
+  /* Background color */
+  height: 900vh;
+}
+
+.sidebar-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #58a4b0;
+  /* Bootstrap primary color */
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  height: 45px;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  color: #58a4b0;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+
+.nav-link:hover {
+  background-color: #f1f1f1;
+  color: #58a4b0;
+}
+
+/* Responsive Sidebar Styles */
+@media (max-width: 768px) {
   .sidebar {
-    width: 280px; /* Fixed width */
-    height: 900vh; /* Full viewport height */
-    overflow: hidden; /* Prevent scrolling */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fix it to the left side of the viewport */
-    top: 50;
-    left: 0;
-    background-color: white; /* Background color */
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
   }
-  
-  .sidebar-header {
-    font-size: 1.2rem;
-    font-weight: 500;
-    background-color: #58a4b0; /* Bootstrap primary color */
-    color: white;
-    padding: 15px;
-    border-radius: 12px;
-    height: 45px;
+
+  .sidebar.active {
+    transform: translateX(0);
   }
-  
-  .nav-link {
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-    color:#58a4b0;
-    font-weight: 600;
-    font-size: 17px;
+
+  /* Adjust main content when sidebar is hidden/shown if necessary, 
+       but for overlay style, we just need z-index and position fixed */
+
+  .logo {
+    max-width: 40px;
+    max-height: 35px;
   }
-  
-  .nav-link:hover {
-    background-color: #f1f1f1;
-    color: #58a4b0;
+
+  .image-dash {
+    margin-left: 10px;
+    /* Reset margin for mobile */
   }
-  
-  
+}
+
+/* Ensure sidebar is visible on desktop */
+@media (min-width: 769px) {
+  .sidebar {
+    transform: translateX(0) !important;
+  }
+}

@@ -1,5 +1,5 @@
-import React from "react";
-import { FaSearch, FaBell } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaSearch, FaBell, FaBars } from "react-icons/fa";
 import './SettingDashboard.css'
 import bg from '../assets/companylogo1.png';
 import pi from '../assets/AdminImage.jpg';

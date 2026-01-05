@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CreateEventModel from "./CreateEvent/CreateEventModel"
 import AnnouncementModel from "./AnnouncementModel/AnnouncementModel"
-import { FaSearch, FaBell, FaTimes } from "react-icons/fa";
+import { FaSearch, FaBell, FaTimes, FaBars } from "react-icons/fa";
 import './EventDashboard.css'
 import bg from '../assets/companylogo1.png';
 import pi from '../assets/AdminImage.jpg';
@@ -21,6 +21,9 @@ const EventDashboard = () => {
   const navigate = useNavigate();
   const [openAnnounce, setOpenAnnounce] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => setShowSidebar(!showSidebar);
 
   // State for API data
   const [donations, setDonations] = useState([]);
@@ -79,6 +82,7 @@ const EventDashboard = () => {
             <Row className="align-items-center ">
               {/* Logo and Title */}
               <Col xs={12} md={5} className="d-flex align-items-center image-dash">
+                <FaBars className="d-md-none me-3 fs-3" onClick={toggleSidebar} style={{ cursor: 'pointer', color: '#58a4b0' }} />
                 <img
                   src={bg}
                   alt="University Logo"
@@ -191,8 +195,8 @@ const EventDashboard = () => {
           )}
         </div>
 
-        <div className="d-flex flex-column vh-100 bg-white sidebar p-4 mt-1" >
-          <div className="sidebar-header-event  text-white d-flex align-items-center " onClick={handleNavigationDashboard}>
+        <div className={`d-flex flex-column vh-100 bg-white sidebar p-4 mt-1 ${showSidebar ? 'show' : ''}`} >
+          <div className="sidebar-header-event  text-white d-flex align-items-center " onClick={toggleSidebar}>
             <FaTimes className="me-2" style={{ color: '#58a4b0', fontSize: '20px' }} />
 
             <span style={{ color: '#58a4b0' }}>Dashboard</span>
@@ -340,6 +344,7 @@ const EventDashboard = () => {
           </div>
         </div>
       </div>
+      {showSidebar && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
     </>
   );
 };
