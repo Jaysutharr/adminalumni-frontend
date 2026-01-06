@@ -33,7 +33,7 @@ const CreateDonation = () => {
         setStatus({ type: '', message: '' });
 
         try {
-            const response = await axios.post('http://localhost:13417/api/v1/createdonations', formData);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/createdonations`, formData);
             if (response.data) {
                 setStatus({ type: 'success', message: 'Donation campaign created successfully!' });
                 setTimeout(() => {
