@@ -16,6 +16,7 @@ import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Nav } from "react-bootstrap";
+const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:13417').replace(/\/$/, '');
 
 const EventDashboard = () => {
   const navigate = useNavigate();
@@ -41,8 +42,9 @@ const EventDashboard = () => {
         setLoading(true);
         setError(null);
         const response = await axios.get(
-          `http://localhost:13417/api/v1/getallcollectionDetails?page=${currentPage}&limit=${limit}`
+          `${API_BASE_URL}/api/v1/getallcollectionDetails?page=${currentPage}&limit=${limit}`
         );
+
 
         if (response.data && response.data.data) {
           setDonations(response.data.data);
