@@ -12,7 +12,7 @@ const ViewAllDonations = ({ onBack }) => {
   const fetchDonations = async () => {
     try {
       // Fetch ALL donations
-      const response = await axios.get("http://localhost:13417/api/v1/donations");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/donations`);
       setDonations(response.data);
     } catch (error) {
       console.error("Error fetching donations:", error);
