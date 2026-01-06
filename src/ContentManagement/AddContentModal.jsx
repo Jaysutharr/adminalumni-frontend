@@ -47,11 +47,11 @@ const AddContentModal = ({ onClose, contentToEdit }) => {
         try {
             let response;
             if (contentToEdit) {
-                response = await axios.put(`http://localhost:13417/api/v1/updatecontent/${contentToEdit._id}`, formData, {
+                response = await axios.put(`${process.env.REACT_APP_API_URL}/api/v1/updatecontent/${contentToEdit._id}`, formData, {
                     headers: { 'Content-Type': 'application/json' }
                 });
             } else {
-                response = await axios.post("http://localhost:13417/api/v1/addcontent", formData, {
+                response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/addcontent`, formData, {
                     headers: { 'Content-Type': 'application/json' }
                 });
             }
