@@ -34,6 +34,7 @@ const AddJobModal = ({ onClose }) => {
                 Required: Number(formData.Required)
             });
 
+
             if (response.status === 201) {
                 alert("Job posted successfully!");
                 onClose();
