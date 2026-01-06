@@ -203,17 +203,17 @@ const DonationTrackingHome = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link
-              className=" d-flex align-items-center"
-              onClick={() => handleNavigation("Reports and Analytics")}
-            >
-              <svg className="me-2" width="18" height="20" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 29.75V26.5M19.5 29.75V24.875M27.625 29.75V21.625M4.0625 20C4.0625 12.7232 4.0625 9.08325 6.32287 6.82287C8.58325 4.5625 12.2216 4.5625 19.5 4.5625C26.7767 4.5625 30.4167 4.5625 32.6771 6.82287C34.9375 9.08325 34.9375 12.7216 34.9375 20C34.9375 27.2767 34.9375 30.9167 32.6771 33.1771C30.4167 35.4375 26.7784 35.4375 19.5 35.4375C12.2232 35.4375 8.58325 35.4375 6.32287 33.1771C4.0625 30.9167 4.0625 27.2784 4.0625 20Z" stroke="#58A4B0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M9.737 19.1646C13.2389 19.2816 21.1803 18.7535 25.6978 11.584M22.737 10.7179L25.7855 10.2271C26.156 10.18 26.702 10.4741 26.8369 10.8235L27.6412 13.4853" stroke="#58A4B0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              Reports and Analytics
-            </Nav.Link>
-          </Nav.Item>
+                      <Nav.Link
+                        className=" d-flex align-items-center"
+                        onClick={() => handleNavigationReport("Reports and Analytics")}
+                      >
+                        <svg className="me-2" width="18" height="20" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.375 29.75V26.5M19.5 29.75V24.875M27.625 29.75V21.625M4.0625 20C4.0625 12.7232 4.0625 9.08325 6.32287 6.82287C8.58325 4.5625 12.2216 4.5625 19.5 4.5625C26.7767 4.5625 30.4167 4.5625 32.6771 6.82287C34.9375 9.08325 34.9375 12.7216 34.9375 20C34.9375 27.2767 34.9375 30.9167 32.6771 33.1771C30.4167 35.4375 26.7784 35.4375 19.5 35.4375C12.2232 35.4375 8.58325 35.4375 6.32287 33.1771C4.0625 30.9167 4.0625 27.2784 4.0625 20Z" stroke="#58A4B0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M9.737 19.1646C13.2389 19.2816 21.1803 18.7535 25.6978 11.584M22.737 10.7179L25.7855 10.2271C26.156 10.18 26.702 10.4741 26.8369 10.8235L27.6412 13.4853" stroke="#58A4B0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Reports and Analytics
+                      </Nav.Link>
+                    </Nav.Item>
           <Nav.Item>
             <Nav.Link
               className=" d-flex align-items-center"
