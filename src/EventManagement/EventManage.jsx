@@ -29,7 +29,9 @@ const EventManage = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await axios.get('http://localhost:13417/api/v1/vieweventDetails');
+        const baseUrl = (process.env.REACT_APP_API_BASE_URL || "http://localhost:13417").replace(/\/$/, "");
+        const response = await axios.get(`${baseUrl}/api/v1/vieweventDetails`);
+
 
         if (response.data && Array.isArray(response.data)) {
           setEvents(response.data);
