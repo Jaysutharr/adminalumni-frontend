@@ -22,6 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Nav } from "react-bootstrap";
 
+const API_BASE_URL = (process.env.REACT_APP_API_URL || "http://localhost:13417").replace(/\/$/, "");
 
 const JobListing = () => {
   const [showPostModal, setShowPostModal] = useState(false);
@@ -32,9 +33,9 @@ const JobListing = () => {
 
   const fetchJobs = async () => {
     try {
-      let url = "http://localhost:13417/api/v1/jobs";
+      let url = `${API_BASE_URL}/api/v1/jobs`;
       if (selectedJobType && selectedJobType !== "All") {
-        url = `http://localhost:13417/api/v1/byJobType?jobType=${selectedJobType}`;
+        let url = `${API_BASE_URL}/api/v1/jobs`;
       }
 
       console.log(`Fetching jobs for type: ${selectedJobType}, URL: ${url}`);
@@ -53,7 +54,7 @@ const JobListing = () => {
 
   const fetchCompletedJobs = async () => {
     try {
-      const response = await axios.get("http://localhost:13417/api/v1/getjobbystatus", {
+      const response = await axios.get(`${API_BASE_URL}/api/v1/getjobbystatus`, {
         params: { status: "Completed" }
       });
       if (response.data && Array.isArray(response.data)) {
