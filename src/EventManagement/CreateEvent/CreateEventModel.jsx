@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import axios from "axios";
 import "./CreateEventModel.css";
+const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:13417').replace(/\/$/, '');
 
 const CreateEventModel = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -38,9 +39,10 @@ const CreateEventModel = ({ onClose }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:13417/api/v1/CreateeventDetails",
+        `${API_BASE_URL}/api/v1/CreateeventDetails`,
         payload
       );
+
       if (response.data.success) {
         alert("Event created successfully!");
         onClose(); // Close modal on success
