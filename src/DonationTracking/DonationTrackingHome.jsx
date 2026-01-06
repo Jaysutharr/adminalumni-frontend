@@ -34,7 +34,7 @@ const DonationTrackingHome = () => {
 
   const fetchDonations = async () => {
     try {
-      const response = await axios.get("http://localhost:13417/api/v1/getbyuserdonations/85201");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/getbyuserdonations/85201`);
       setDonations(response.data);
     } catch (error) {
       console.error("Error fetching donations:", error);
