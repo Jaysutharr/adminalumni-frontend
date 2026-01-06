@@ -7,7 +7,8 @@ const ViewAllJobs = ({ onBack }) => {
 
   const fetchJobs = async () => {
     try {
-      const response = await axios.get("http://localhost:13417/api/v1/jobs");
+      const baseUrl = (process.env.REACT_APP_API_URL || "http://localhost:13417").replace(/\/$/, "");
+      const response = await axios.get(`${baseUrl}/api/v1/jobs`);
       if (response.data && response.data.success && Array.isArray(response.data.data)) {
         setJobs(response.data.data);
       }
