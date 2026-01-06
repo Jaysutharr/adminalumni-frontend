@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./UpdateEventModel.css";
+const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:13417').replace(/\/$/, '');
 
 const UpdateEventModel = ({ onClose, eventData }) => {
     const [formData, setFormData] = useState({
@@ -65,9 +66,10 @@ const UpdateEventModel = ({ onClose, eventData }) => {
 
         try {
             const response = await axios.put(
-                `http://localhost:13417/api/v1/updateeventDetails/${formData.eventId}`,
+                `${API_BASE_URL}/api/v1/updateeventDetails/${formData.eventId}`,
                 payload
             );
+
 
             // Success handling
             if (response.status === 200 && response.data) {
