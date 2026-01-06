@@ -29,11 +29,10 @@ const AddJobModal = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(
-                "http://localhost:13417/api/v1/jobs",
-                payload,
-                { headers: { "Content-Type": "application/json" } }
-            );
+            const response = await axios.post("http://localhost:13417/api/v1/jobs", {
+                ...formData,
+                Required: Number(formData.Required)
+            });
 
 
             if (response.status === 201) {
