@@ -38,7 +38,7 @@ const JobListingView = () => {
 
     const fetchJobDetails = async () => {
         try {
-            const response = await axios.get(`http://localhost:13417/api/v1/jobs/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/jobs/${id}`);
             if (response.data) {
                 setJob(response.data);
             }

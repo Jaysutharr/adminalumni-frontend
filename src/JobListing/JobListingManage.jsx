@@ -22,7 +22,7 @@ const JobListingManage = () => {
 
     const fetchJobs = async () => {
         try {
-            const response = await axios.get("http://localhost:13417/api/v1/jobs");
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/jobs`);
             if (response.data && response.data.success && Array.isArray(response.data.data)) {
                 setJobs(response.data.data);
             }
