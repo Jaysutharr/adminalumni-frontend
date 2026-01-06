@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import bg from "../../assets/companylogo1.png";
 import pi from "../../assets/AdminImage.jpg";
 import ni from "../../assets/notificationI.jpeg";
+const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:13417').replace(/\/$/, '');
 
 const ViewAllEvents = () => {
   const navigate = useNavigate();
@@ -26,7 +27,8 @@ const ViewAllEvents = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await axios.get('http://localhost:13417/api/v1/vieweventDetails');
+        const response = await axios.get(`${API_BASE_URL}/api/v1/vieweventDetails`);
+
 
         if (response.data && Array.isArray(response.data)) {
           setEvents(response.data);
