@@ -29,7 +29,7 @@ const AddJobModal = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:13417/api/v1/jobs", {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/jobs`, {
                 ...formData,
                 Required: Number(formData.Required)
             });
