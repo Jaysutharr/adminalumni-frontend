@@ -12,7 +12,7 @@ const DonationTrackingManage = ({ onBack }) => {
 
     const fetchDonations = async () => {
         try {
-            const response = await axios.get("http://localhost:13417/api/v1/getbyuserdonations/85201");
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/getbyuserdonations/85201`);
             setDonations(response.data);
         } catch (error) {
             console.error("Error fetching donations:", error);
@@ -28,7 +28,7 @@ const DonationTrackingManage = ({ onBack }) => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this donation?")) {
             try {
-                await axios.delete(`http://localhost:13417/api/v1/deletedonations/${id}`);
+                await axios.delete(`${process.env.REACT_APP_API_URL}/api/v1/deletedonations/${id}`);
                 alert("Donation deleted successfully!");
                 fetchDonations();
             } catch (error) {
