@@ -100,7 +100,10 @@ const ContentManageHome = () => {
     setIsFetching(true); // Start loading
     try {
       // const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-      const response = await fetch(process.env.REACT_APP_localUrl + "/api/v1/posts");
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/api/v1/posts`
+      );
+
       const result = await response.json();
 
       const formattedData = result.slice(0, 8).map((item, index) => ({
