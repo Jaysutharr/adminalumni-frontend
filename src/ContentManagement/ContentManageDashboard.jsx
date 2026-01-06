@@ -29,10 +29,10 @@ const ContentManageDashboard = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
+  const API_BASE_URL = (process.env.REACT_APP_API_URL || "http://localhost:13417").replace(/\/$/, "");
   const fetchContents = async () => {
     try {
-      let url = "http://localhost:13417/api/v1/getcontent";
+      let url = `${API_BASE_URL}/api/v1/getcontent`;
       if (selectedFilter !== "All") {
         url += `?Category=${selectedFilter}`;
       }
