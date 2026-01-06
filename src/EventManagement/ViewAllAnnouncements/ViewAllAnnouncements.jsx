@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import bg from "../../assets/companylogo1.png";
 import pi from "../../assets/AdminImage.jpg";
 import ni from "../../assets/notificationI.jpeg";
+const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:13417').replace(/\/$/, '');
 
 const ViewAllAnnouncements = () => {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ const ViewAllAnnouncements = () => {
         setLoading(true);
         setError(null);
         // Using content API for announcements
-        const response = await axios.get('http://localhost:13417/api/v1/getcontent');
+        const response = await axios.get(`${API_BASE_URL}/api/v1/getcontent`);
+
 
         if (response.data && Array.isArray(response.data)) {
           setAnnouncements(response.data);
