@@ -155,12 +155,12 @@ const SettingHome = () => {
   const handleLogout = () => {
     // Perform any cleanup (clear tokens, etc.) here
     console.log("Logging out...");
-    navigate('/signin'); // Redirect to signin page
+    navigate('/'); // Redirect to signin page
   };
 
   return (
     <>
-      <SettingDashboard />
+      <SettingDashboard onLogoutClick={() => setShowLogoutModal(true)} />
 
       <div className="settings-main-content">
         <Container fluid>

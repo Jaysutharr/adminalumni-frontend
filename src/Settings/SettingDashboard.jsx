@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Nav } from "react-bootstrap";
 
-const SettingDashboard = () => {
+const SettingDashboard = ({ onLogoutClick }) => {
   const navigate = useNavigate();
   const handleNotifyNavigation = () => {
     navigate('/dashboard-noti')
@@ -178,7 +178,7 @@ const SettingDashboard = () => {
           <Nav.Item>
             <Nav.Link
               className=" d-flex align-items-center"
-              onClick={() => handleNavigation("Logout")}
+              onClick={onLogoutClick || (() => handleNavigation("Logout"))}
             >
               <svg className="me-2" width="18" height="16" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.6667 18.333L26 12.9997M26 12.9997L20.6667 7.66634M26 12.9997H7.33333M15.3333 18.333V19.6663C15.3333 20.7272 14.9119 21.7446 14.1618 22.4948C13.4116 23.2449 12.3942 23.6663 11.3333 23.6663H6C4.93913 23.6663 3.92172 23.2449 3.17157 22.4948C2.42143 21.7446 2 20.7272 2 19.6663V6.33301C2 5.27214 2.42143 4.25473 3.17157 3.50458C3.92172 2.75444 4.93913 2.33301 6 2.33301H11.3333C12.3942 2.33301 13.4116 2.75444 14.1618 3.50458C14.9119 4.25473 15.3333 5.27214 15.3333 6.33301V7.66634" stroke="#58A4B0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
