@@ -56,11 +56,16 @@
   font-size: 1.2rem;
   font-weight: 500;
   background-color: white;
-  /* Bootstrap primary color */
   color: #58a4b0;
-  padding: 15px;
-  border-radius: 12px;
-  height: 5px;
+  padding: 10px 15px;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-header-event:hover {
+  background-color: #f1f1f1;
+  color: #58a4b0;
 }
 
 .sidebar-header1-event {
@@ -170,12 +175,6 @@
   gap: 30px;
   margin-top: 15px;
   color: #777;
-}
-
-.sidebar a.active {
-  background: #5aa7b0;
-  color: #fff;
-  border-radius: 10px;
 }
 
 .events-table-card {
